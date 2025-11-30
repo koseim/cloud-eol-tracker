@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://your-domain.pages.dev/sitemap.xml
+Sitemap: https://cloud-eol-tracker.pages.dev/sitemap.xml

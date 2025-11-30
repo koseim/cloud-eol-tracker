@@ -230,10 +230,19 @@ Adjust in `css/responsive.css` as needed.
 
 Contributions are welcome! To contribute:
 
-1. Fork the repository
+1. Fork the repository at [github.com/koseim/cloud-eol-tracker](https://github.com/koseim/cloud-eol-tracker)
 2. Create a feature branch
 3. Add your changes (new services, bug fixes, features)
 4. Submit a pull request
+
+### Reporting Issues
+
+If you find any errors, outdated information, or bugs:
+
+- **Report an Issue**: Open an issue on [GitHub Issues](https://github.com/koseim/cloud-eol-tracker/issues) with details about what you found
+- **Submit a Fix**: Feel free to submit a pull request with corrections directly
+
+We appreciate all contributions that help keep this information accurate and up-to-date!
 
 ### Adding Services
 

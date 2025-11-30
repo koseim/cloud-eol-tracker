@@ -49,6 +49,8 @@ const I18n = {
             disclaimerTrademarks: 'All trademarks, service marks, and company names are the property of their respective owners.',
             disclaimerLiability: 'The authors and contributors are not liable for any damages arising from the use of this information.',
             downloadJson: 'Download JSON Data',
+            githubContribute: 'Contribute on GitHub',
+            reportIssue: 'Found an error? Report an issue or submit a PR',
 
             // Card/Table Content
             eolDate: 'EOL Date',
@@ -125,6 +127,8 @@ const I18n = {
             disclaimerTrademarks: 'すべての商標、サービスマーク、企業名は各所有者に帰属します。',
             disclaimerLiability: '本情報の利用により生じたいかなる損害についても、作成者および貢献者は責任を負いません。',
             downloadJson: 'JSONデータをダウンロード',
+            githubContribute: 'GitHubで貢献する',
+            reportIssue: '誤りを見つけましたか？Issueまたはプルリクエストをお願いします',
 
             // カード/テーブルコンテンツ
             eolDate: 'EOL日',

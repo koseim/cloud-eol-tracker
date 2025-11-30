@@ -180,17 +180,20 @@ const I18n = {
         }
 
         this.applyTranslations();
-        this.updateLanguageButton();
+        this.setupLanguageSelector();
     },
 
     /**
      * Switch language
+     * @param {string} lang - Language code to switch to
      */
-    switchLanguage() {
-        this.currentLanguage = this.currentLanguage === 'en' ? 'ja' : 'en';
+    switchLanguage(lang) {
+        if (lang && this.translations[lang]) {
+            this.currentLanguage = lang;
+        }
         localStorage.setItem('language', this.currentLanguage);
         this.applyTranslations();
-        this.updateLanguageButton();
+        this.updateLanguageSelector();
 
         // Trigger event for app to update dynamic content
         window.dispatchEvent(new CustomEvent('languageChanged', {
@@ -236,15 +239,28 @@ const I18n = {
     },
 
     /**
-     * Update language toggle button
+     * Setup language selector dropdown
      */
-    updateLanguageButton() {
-        const langButton = document.getElementById('language-toggle');
-        if (langButton) {
-            const langText = langButton.querySelector('.lang-text');
-            if (langText) {
-                langText.textContent = this.currentLanguage === 'en' ? '日本語' : 'English';
-            }
+    setupLanguageSelector() {
+        const langSelector = document.getElementById('language-toggle');
+        if (langSelector) {
+            // Set current language
+            langSelector.value = this.currentLanguage;
+
+            // Add change event listener
+            langSelector.addEventListener('change', (e) => {
+                this.switchLanguage(e.target.value);
+            });
+        }
+    },
+
+    /**
+     * Update language selector dropdown
+     */
+    updateLanguageSelector() {
+        const langSelector = document.getElementById('language-toggle');
+        if (langSelector) {
+            langSelector.value = this.currentLanguage;
         }
     },
 

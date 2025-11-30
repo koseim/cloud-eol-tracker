@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Track End-of-Life and deprecation dates for cloud services including AWS, Azure, GCP, and more">
+    <meta name="keywords" content="cloud services, EOL, end-of-life, AWS, Azure, GCP, deprecation, cloud computing">
+
+    <!-- Content Security Policy -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://www.googletagmanager.com https://www.google-analytics.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://www.google-analytics.com; font-src 'self'; connect-src 'self' https://www.google-analytics.com https://analytics.google.com; frame-ancestors 'none'; base-uri 'self'; form-action 'self';">
+
+    <!-- Open Graph Protocol (OGP) -->
+    <meta property="og:title" content="Cloud Service EOL Tracker">
+    <meta property="og:description" content="Track End-of-Life and deprecation dates for cloud services including AWS, Azure, GCP, and more">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://your-domain.pages.dev/">
+    <meta property="og:image" content="https://your-domain.pages.dev/images/og-image.png">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Cloud Service EOL Tracker">
+    <meta name="twitter:description" content="Track End-of-Life and deprecation dates for cloud services including AWS, Azure, GCP, and more">
+    <meta name="twitter:image" content="https://your-domain.pages.dev/images/twitter-card.png">
+
+    <!-- Theme Color -->
+    <meta name="theme-color" content="#2563eb">
+
+    <title>Cloud Service EOL Tracker</title>
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/icon-192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="/icon-512.png">
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-XXXXXXXXXX');
+    </script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="header-text">
+                    <h1 data-i18n="title">Cloud Service EOL Tracker</h1>
+                    <p class="subtitle" data-i18n="subtitle">Stay informed about cloud service deprecations and end-of-life dates</p>
+                </div>
+                <button id="language-toggle" class="btn-language" aria-label="Switch language">
+                    <span class="lang-icon">🌐</span>
+                    <span class="lang-text">日本語</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container">
+        <!-- Controls Section -->
+        <section class="controls">
+            <!-- Search Box -->
+            <div class="search-box">
+                <input
+                    type="text"
+                    id="search"
+                    data-i18n-placeholder="searchPlaceholder"
+                    placeholder="Search services..."
+                    aria-label="Search cloud services"
+                >
+            </div>
+
+            <!-- Filters Row -->
+            <div class="filters">
+                <select id="vendor-filter" aria-label="Filter by vendor">
+                    <option value="" data-i18n="allVendors">All Vendors</option>
+                </select>
+
+                <select id="category-filter" aria-label="Filter by category">
+                    <option value="" data-i18n="allCategories">All Categories</option>
+                </select>
+
+                <select id="eol-proximity-filter" aria-label="Filter by EOL proximity">
+                    <option value="upcoming" data-i18n="upcomingOnly">Upcoming EOL Only</option>
+                    <option value="" data-i18n="allTime">All Time</option>
+                    <option value="past" data-i18n="alreadyEOL">Already EOL</option>
+                    <option value="30" data-i18n="next30Days">Next 30 days</option>
+                    <option value="90" data-i18n="next90Days">Next 90 days</option>
+                    <option value="180" data-i18n="next6Months">Next 6 months</option>
+                    <option value="365" data-i18n="nextYear">Next year</option>
+                </select>
+
+                <select id="sort-by" aria-label="Sort services">
+                    <option value="eol-date-asc" data-i18n="sortEOLSoon">EOL Date (Soon first)</option>
+                    <option value="eol-date-desc" data-i18n="sortEOLLate">EOL Date (Latest first)</option>
+                    <option value="name-asc" data-i18n="sortNameAZ">Service Name (A-Z)</option>
+                    <option value="name-desc" data-i18n="sortNameZA">Service Name (Z-A)</option>
+                    <option value="vendor-asc" data-i18n="sortVendor">Vendor (A-Z)</option>
+                </select>
+            </div>
+
+            <!-- Stats and View Toggle -->
+            <div class="controls-footer">
+                <div class="stats">
+                    <span id="result-count" aria-live="polite">0 services</span>
+                    <span id="last-updated"></span>
+                </div>
+
+                <div class="view-toggle">
+                    <button
+                        id="toggle-view"
+                        class="btn-toggle"
+                        aria-label="Toggle between card and table view"
+                    >
+                        <span class="view-icon">&#9776;</span>
+                        <span class="view-text" data-i18n="tableView">Table View</span>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Results Container -->
+        <div id="results-container" class="results">
+                <!-- Loading State -->
+                <div id="loading" class="loading">
+                    <div class="spinner"></div>
+                    <p data-i18n="loading">Loading cloud service data...</p>
+                </div>
+
+                <!-- Error State -->
+                <div id="error" class="error hidden">
+                    <p class="error-message" data-i18n="errorMessage">Failed to load data. Please try again later.</p>
+                </div>
+
+                <!-- Empty State -->
+                <div id="empty" class="empty hidden">
+                    <p class="empty-message" data-i18n="emptyMessage">No services match your filters. Try adjusting your search criteria.</p>
+                </div>
+
+                <!-- Cards/Table will be inserted here dynamically -->
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p><span data-i18n="dataLastUpdated">Data last updated</span>: <span id="footer-update-date">Loading...</span></p>
+
+            <div class="footer-notices">
+                <p><strong data-i18n="disclaimerTitle">Disclaimer:</strong></p>
+                <ul class="disclaimer-list">
+                    <li data-i18n="disclaimerAccuracy">This information may contain errors. Please verify with official sources before making decisions.</li>
+                    <li data-i18n="disclaimerNoWarranty">This information is provided "as is" without warranty of any kind, either expressed or implied.</li>
+                    <li data-i18n="disclaimerNoSLA">No Service Level Agreement (SLA) or guarantee of accuracy, completeness, or timeliness is provided.</li>
+                    <li data-i18n="disclaimerTrademarks">All trademarks, service marks, and company names are the property of their respective owners.</li>
+                    <li data-i18n="disclaimerLiability">The authors and contributors are not liable for any damages arising from the use of this information.</li>
+                </ul>
+            </div>
+
+            <p class="footer-download">
+                <a href="data/eol-data.json" download="eol-data.json" class="download-link">
+                    <span class="download-icon">📥</span>
+                    <span data-i18n="downloadJson">Download JSON Data</span>
+                </a>
+            </p>
+
+            <p class="footer-privacy">
+                <a href="privacy.html" style="color: #666; text-decoration: underline;">Privacy Policy</a>
+            </p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/config.js"></script>
+    <script src="js/i18n.js"></script>
+    <script src="js/data-loader.js"></script>
+    <script src="js/filters.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>

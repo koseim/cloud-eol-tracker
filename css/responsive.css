@@ -1,0 +1,246 @@
+/* =====================================================
+   Cloud Service EOL Tracker - Responsive Styles
+   Mobile-First Approach
+   ===================================================== */
+
+/* =====================================================
+   Base: Mobile (< 768px)
+   Already defined in styles.css
+   ===================================================== */
+
+/* =====================================================
+   Tablet: 768px and up
+   ===================================================== */
+
+@media (min-width: 768px) {
+    /* Typography */
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    .subtitle {
+        font-size: 1.25rem;
+    }
+
+    /* Header */
+    header {
+        padding: var(--spacing-xl) 0;
+    }
+
+    /* Controls */
+    .filters {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .filters select {
+        flex: 1;
+        min-width: 200px;
+    }
+
+    .controls-footer {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .stats {
+        flex-direction: row;
+        gap: var(--spacing-md);
+    }
+
+    /* Cards */
+    .cards-view {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .card-dates {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* =====================================================
+   Desktop: 1024px and up
+   ===================================================== */
+
+@media (min-width: 1024px) {
+    /* Typography */
+    h1 {
+        font-size: 3rem;
+    }
+
+    /* Container */
+    .container {
+        padding: 0 var(--spacing-lg);
+    }
+
+    /* Main Content Grid */
+    .content-grid {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-xl);
+    }
+
+    /* Cards */
+    .cards-view {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Table View - Better spacing */
+    .data-table th {
+        padding: var(--spacing-md) var(--spacing-lg);
+    }
+
+    .data-table td {
+        padding: var(--spacing-md) var(--spacing-lg);
+    }
+
+    /* Filters - More compact */
+    .filters select {
+        min-width: 180px;
+    }
+}
+
+/* =====================================================
+   Large Desktop: 1280px and up
+   ===================================================== */
+
+@media (min-width: 1280px) {
+    /* Container */
+    .container {
+        max-width: 1400px;
+    }
+
+    /* Cards - Three columns */
+    .cards-view {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    /* Larger spacing */
+    main {
+        padding: var(--spacing-xl) 0;
+    }
+}
+
+/* =====================================================
+   Print Styles
+   ===================================================== */
+
+@media print {
+    /* Hide non-essential elements */
+    .controls,
+    footer,
+    .view-toggle {
+        display: none !important;
+    }
+
+    /* Reset backgrounds */
+    body {
+        background: white;
+    }
+
+    .card {
+        page-break-inside: avoid;
+        box-shadow: none;
+        border: 1px solid var(--border-color);
+    }
+
+    /* Adjust colors for print */
+    a {
+        color: var(--text-primary);
+        text-decoration: underline;
+    }
+
+    /* Show URLs */
+    a[href]:after {
+        content: " (" attr(href) ")";
+        font-size: var(--font-size-xs);
+        color: var(--text-secondary);
+    }
+}
+
+/* =====================================================
+   Accessibility - Reduced Motion
+   ===================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+
+    .spinner {
+        animation: none;
+        border-top-color: var(--primary-color);
+    }
+}
+
+/* =====================================================
+   Dark Mode Support (Optional)
+   ===================================================== */
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --background: #1a1a1a;
+        --card-background: #2d2d2d;
+        --text-primary: #e0e0e0;
+        --text-secondary: #b0b0b0;
+        --text-muted: #808080;
+        --border-color: #404040;
+        --primary-color: #4a9eff;
+        --primary-dark: #3a8eef;
+        --primary-light: #5aaeef;
+    }
+
+    header {
+        background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 100%);
+    }
+
+    .card:hover {
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+    }
+
+    .ad-container {
+        background-color: #252525;
+        border-color: #404040;
+    }
+
+    footer {
+        background-color: #1a1a1a;
+        border-top: 1px solid #404040;
+    }
+}
+
+/* =====================================================
+   Landscape Mobile Optimizations
+   ===================================================== */
+
+@media (max-height: 500px) and (orientation: landscape) {
+    header {
+        padding: var(--spacing-md) 0;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    .subtitle {
+        font-size: var(--font-size-base);
+    }
+
+    .controls {
+        padding: var(--spacing-sm);
+    }
+}
+
+/* =====================================================
+   High DPI / Retina Display Optimizations
+   ===================================================== */
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    /* Optimize border rendering on high-DPI displays */
+    .card,
+    .controls {
+        border-width: 0.5px;
+    }
+}

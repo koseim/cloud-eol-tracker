@@ -1,0 +1,825 @@
+{
+  "lastUpdated": "2025-11-30T01:56:45Z",
+  "services": [
+    {
+      "id": "aws-ec2-classic",
+      "vendor": "AWS",
+      "serviceName": "EC2-Classic",
+      "category": "compute",
+      "eolDate": "2022-08-15",
+      "supportEndDate": "2022-08-15",
+      "officialUrl": "https://aws.amazon.com/blogs/aws/ec2-classic-is-retiring-heres-how-to-prepare/",
+      "alternatives": [
+        {
+          "serviceName": "Amazon VPC",
+          "url": "https://aws.amazon.com/vpc/"
+        }
+      ],
+      "description": "Legacy EC2 networking platform replaced by VPC. All EC2 instances must now be launched in a VPC.",
+      "tags": ["legacy", "networking", "compute"]
+    },
+    {
+      "id": "aws-s3-path-style",
+      "vendor": "AWS",
+      "serviceName": "S3 Path-Style URL Access",
+      "category": "storage",
+      "eolDate": "2023-09-30",
+      "supportEndDate": "2023-09-30",
+      "officialUrl": "https://aws.amazon.com/blogs/aws/amazon-s3-path-deprecation-plan-the-rest-of-the-story/",
+      "alternatives": [
+        {
+          "serviceName": "S3 Virtual-Hosted-Style URLs",
+          "url": "https://docs.aws.amazon.com/AmazonS3/latest/userguide/VirtualHosting.html"
+        }
+      ],
+      "description": "Legacy URL format for S3 object access. Virtual-hosted-style URLs are now the standard.",
+      "tags": ["legacy", "api", "storage"]
+    },
+    {
+      "id": "aws-rds-mysql-57",
+      "vendor": "AWS",
+      "serviceName": "RDS MySQL 5.7",
+      "category": "database",
+      "eolDate": "2024-02-29",
+      "supportEndDate": "2024-02-29",
+      "officialUrl": "https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/MySQL.Concepts.VersionMgmt.html",
+      "alternatives": [
+        {
+          "serviceName": "RDS MySQL 8.0",
+          "url": "https://aws.amazon.com/rds/mysql/"
+        }
+      ],
+      "description": "MySQL 5.7 has reached end of life. Upgrade to MySQL 8.0 for continued support and new features.",
+      "tags": ["database", "mysql", "upgrade"]
+    },
+    {
+      "id": "aws-lambda-nodejs-12",
+      "vendor": "AWS",
+      "serviceName": "Lambda Node.js 12.x Runtime",
+      "category": "compute",
+      "eolDate": "2023-03-31",
+      "supportEndDate": "2023-03-31",
+      "officialUrl": "https://docs.aws.amazon.com/lambda/latest/dg/lambda-runtimes.html",
+      "alternatives": [
+        {
+          "serviceName": "Lambda Node.js 18.x",
+          "url": "https://aws.amazon.com/blogs/compute/node-js-18-x-runtime-now-available-in-aws-lambda/"
+        },
+        {
+          "serviceName": "Lambda Node.js 20.x",
+          "url": "https://aws.amazon.com/blogs/compute/node-js-20-x-runtime-now-available-in-aws-lambda/"
+        }
+      ],
+      "description": "Node.js 12.x runtime is deprecated. Migrate to Node.js 18.x or 20.x for latest features and security updates.",
+      "tags": ["serverless", "runtime", "nodejs"]
+    },
+    {
+      "id": "aws-lambda-nodejs-14",
+      "vendor": "AWS",
+      "serviceName": "Lambda Node.js 14.x Runtime",
+      "category": "compute",
+      "eolDate": "2023-11-27",
+      "supportEndDate": "2023-11-27",
+      "officialUrl": "https://docs.aws.amazon.com/lambda/latest/dg/lambda-runtimes.html",
+      "alternatives": [
+        {
+          "serviceName": "Lambda Node.js 18.x",
+          "url": "https://aws.amazon.com/blogs/compute/node-js-18-x-runtime-now-available-in-aws-lambda/"
+        },
+        {
+          "serviceName": "Lambda Node.js 20.x",
+          "url": "https://aws.amazon.com/blogs/compute/node-js-20-x-runtime-now-available-in-aws-lambda/"
+        }
+      ],
+      "description": "Node.js 14.x runtime has reached end of life. Migrate to Node.js 18.x or 20.x for continued support.",
+      "tags": ["serverless", "runtime", "nodejs"]
+    },
+    {
+      "id": "aws-lambda-nodejs-16",
+      "vendor": "AWS",
+      "serviceName": "Lambda Node.js 16.x Runtime",
+      "category": "compute",
+      "eolDate": "2024-06-12",
+      "supportEndDate": "2024-06-12",
+      "officialUrl": "https://docs.aws.amazon.com/lambda/latest/dg/lambda-runtimes.html",
+      "alternatives": [
+        {
+          "serviceName": "Lambda Node.js 18.x",
+          "url": "https://aws.amazon.com/blogs/compute/node-js-18-x-runtime-now-available-in-aws-lambda/"
+        },
+        {
+          "serviceName": "Lambda Node.js 20.x",
+          "url": "https://aws.amazon.com/blogs/compute/node-js-20-x-runtime-now-available-in-aws-lambda/"
+        }
+      ],
+      "description": "Node.js 16.x runtime reached end of support. Upgrade to Node.js 18.x or 20.x for latest features.",
+      "tags": ["serverless", "runtime", "nodejs"]
+    },
+    {
+      "id": "aws-lambda-python-36",
+      "vendor": "AWS",
+      "serviceName": "Lambda Python 3.6 Runtime",
+      "category": "compute",
+      "eolDate": "2022-07-18",
+      "supportEndDate": "2022-07-18",
+      "officialUrl": "https://docs.aws.amazon.com/lambda/latest/dg/lambda-runtimes.html",
+      "alternatives": [
+        {
+          "serviceName": "Lambda Python 3.11",
+          "url": "https://aws.amazon.com/blogs/compute/python-3-11-runtime-now-available-in-aws-lambda/"
+        },
+        {
+          "serviceName": "Lambda Python 3.12",
+          "url": "https://aws.amazon.com/lambda/"
+        }
+      ],
+      "description": "Python 3.6 runtime has been deprecated. Update to Python 3.11 or 3.12 for improved performance and security.",
+      "tags": ["serverless", "runtime", "python"]
+    },
+    {
+      "id": "aws-lambda-python-37",
+      "vendor": "AWS",
+      "serviceName": "Lambda Python 3.7 Runtime",
+      "category": "compute",
+      "eolDate": "2023-11-27",
+      "supportEndDate": "2023-11-27",
+      "officialUrl": "https://docs.aws.amazon.com/lambda/latest/dg/lambda-runtimes.html",
+      "alternatives": [
+        {
+          "serviceName": "Lambda Python 3.11",
+          "url": "https://aws.amazon.com/blogs/compute/python-3-11-runtime-now-available-in-aws-lambda/"
+        },
+        {
+          "serviceName": "Lambda Python 3.12",
+          "url": "https://aws.amazon.com/lambda/"
+        }
+      ],
+      "description": "Python 3.7 runtime reached end of life. Upgrade to Python 3.11 or 3.12 for continued support.",
+      "tags": ["serverless", "runtime", "python"]
+    },
+    {
+      "id": "aws-lambda-python-38",
+      "vendor": "AWS",
+      "serviceName": "Lambda Python 3.8 Runtime",
+      "category": "compute",
+      "eolDate": "2024-10-14",
+      "supportEndDate": "2024-10-14",
+      "officialUrl": "https://docs.aws.amazon.com/lambda/latest/dg/lambda-runtimes.html",
+      "alternatives": [
+        {
+          "serviceName": "Lambda Python 3.11",
+          "url": "https://aws.amazon.com/blogs/compute/python-3-11-runtime-now-available-in-aws-lambda/"
+        },
+        {
+          "serviceName": "Lambda Python 3.12",
+          "url": "https://aws.amazon.com/lambda/"
+        }
+      ],
+      "description": "Python 3.8 runtime will reach end of support. Plan migration to Python 3.11 or 3.12.",
+      "tags": ["serverless", "runtime", "python"]
+    },
+    {
+      "id": "aws-lambda-java-8",
+      "vendor": "AWS",
+      "serviceName": "Lambda Java 8 (AL1) Runtime",
+      "category": "compute",
+      "eolDate": "2024-01-08",
+      "supportEndDate": "2024-01-08",
+      "officialUrl": "https://docs.aws.amazon.com/lambda/latest/dg/lambda-runtimes.html",
+      "alternatives": [
+        {
+          "serviceName": "Lambda Java 11",
+          "url": "https://aws.amazon.com/blogs/compute/java-11-runtime-now-available-in-aws-lambda/"
+        },
+        {
+          "serviceName": "Lambda Java 17",
+          "url": "https://aws.amazon.com/blogs/compute/java-17-runtime-now-available-in-aws-lambda/"
+        },
+        {
+          "serviceName": "Lambda Java 21",
+          "url": "https://aws.amazon.com/blogs/compute/introducing-the-java-21-runtime-for-aws-lambda/"
+        }
+      ],
+      "description": "Java 8 on Amazon Linux 1 runtime is deprecated. Migrate to Java 11, 17, or 21 on Amazon Linux 2.",
+      "tags": ["serverless", "runtime", "java"]
+    },
+    {
+      "id": "aws-lambda-ruby-27",
+      "vendor": "AWS",
+      "serviceName": "Lambda Ruby 2.7 Runtime",
+      "category": "compute",
+      "eolDate": "2023-12-07",
+      "supportEndDate": "2023-12-07",
+      "officialUrl": "https://docs.aws.amazon.com/lambda/latest/dg/lambda-runtimes.html",
+      "alternatives": [
+        {
+          "serviceName": "Lambda Ruby 3.2",
+          "url": "https://aws.amazon.com/blogs/compute/introducing-the-ruby-3-2-runtime-for-aws-lambda/"
+        }
+      ],
+      "description": "Ruby 2.7 runtime has reached end of life. Migrate to Ruby 3.2 for continued support and improvements.",
+      "tags": ["serverless", "runtime", "ruby"]
+    },
+    {
+      "id": "aws-lambda-dotnet-core-31",
+      "vendor": "AWS",
+      "serviceName": "Lambda .NET Core 3.1 Runtime",
+      "category": "compute",
+      "eolDate": "2023-04-03",
+      "supportEndDate": "2023-04-03",
+      "officialUrl": "https://docs.aws.amazon.com/lambda/latest/dg/lambda-runtimes.html",
+      "alternatives": [
+        {
+          "serviceName": "Lambda .NET 6",
+          "url": "https://aws.amazon.com/blogs/compute/introducing-the-net-6-runtime-for-aws-lambda/"
+        },
+        {
+          "serviceName": "Lambda .NET 7",
+          "url": "https://aws.amazon.com/blogs/compute/introducing-the-net-7-runtime-for-aws-lambda/"
+        }
+      ],
+      "description": ".NET Core 3.1 runtime has been deprecated. Upgrade to .NET 6 or .NET 7 for latest features.",
+      "tags": ["serverless", "runtime", "dotnet"]
+    },
+    {
+      "id": "aws-lambda-go-1x",
+      "vendor": "AWS",
+      "serviceName": "Lambda Go 1.x Runtime",
+      "category": "compute",
+      "eolDate": "2023-12-31",
+      "supportEndDate": "2023-12-31",
+      "officialUrl": "https://docs.aws.amazon.com/lambda/latest/dg/lambda-runtimes.html",
+      "alternatives": [
+        {
+          "serviceName": "Lambda Custom Runtime on Amazon Linux 2023",
+          "url": "https://docs.aws.amazon.com/lambda/latest/dg/golang-package.html"
+        }
+      ],
+      "description": "Go 1.x managed runtime is deprecated. Use the custom runtime on Amazon Linux 2023 with Go.",
+      "tags": ["serverless", "runtime", "golang"]
+    },
+    {
+      "id": "aws-elasticsearch-service",
+      "vendor": "AWS",
+      "serviceName": "Amazon Elasticsearch Service",
+      "category": "analytics",
+      "eolDate": "2021-09-08",
+      "supportEndDate": "2021-09-08",
+      "officialUrl": "https://aws.amazon.com/blogs/aws/amazon-elasticsearch-service-is-now-amazon-opensearch-service/",
+      "alternatives": [
+        {
+          "serviceName": "Amazon OpenSearch Service",
+          "url": "https://aws.amazon.com/opensearch-service/"
+        }
+      ],
+      "description": "Rebranded to Amazon OpenSearch Service. Existing domains automatically transitioned to the new service name.",
+      "tags": ["analytics", "search", "rebranding"]
+    },
+    {
+      "id": "aws-codedeploy-lambda-old-api",
+      "vendor": "AWS",
+      "serviceName": "CodeDeploy Lambda Compute Platform (Old API)",
+      "category": "other",
+      "eolDate": "2023-12-31",
+      "supportEndDate": "2023-12-31",
+      "officialUrl": "https://docs.aws.amazon.com/codedeploy/latest/userguide/welcome.html",
+      "alternatives": [
+        {
+          "serviceName": "Lambda Function Versions and Aliases",
+          "url": "https://docs.aws.amazon.com/lambda/latest/dg/configuration-versions.html"
+        }
+      ],
+      "description": "Legacy CodeDeploy API for Lambda deployments. Use Lambda aliases and versions for blue/green deployments.",
+      "tags": ["cicd", "deployment", "serverless"]
+    },
+    {
+      "id": "aws-rds-postgresql-11",
+      "vendor": "AWS",
+      "serviceName": "RDS PostgreSQL 11",
+      "category": "database",
+      "eolDate": "2024-02-29",
+      "supportEndDate": "2024-02-29",
+      "officialUrl": "https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/PostgreSQL.Concepts.General.DBVersions.html",
+      "alternatives": [
+        {
+          "serviceName": "RDS PostgreSQL 15",
+          "url": "https://aws.amazon.com/rds/postgresql/"
+        },
+        {
+          "serviceName": "RDS PostgreSQL 16",
+          "url": "https://aws.amazon.com/rds/postgresql/"
+        }
+      ],
+      "description": "PostgreSQL 11 reached end of standard support. Upgrade to PostgreSQL 15 or 16 for continued updates.",
+      "tags": ["database", "postgresql", "upgrade"]
+    },
+    {
+      "id": "aws-lambda-python-39",
+      "vendor": "AWS",
+      "serviceName": "Lambda Python 3.9 Runtime",
+      "category": "compute",
+      "eolDate": "2025-12-15",
+      "supportEndDate": "2025-12-15",
+      "officialUrl": "https://docs.aws.amazon.com/lambda/latest/dg/lambda-runtimes.html",
+      "alternatives": [
+        {
+          "serviceName": "Lambda Python 3.11",
+          "url": "https://aws.amazon.com/blogs/compute/python-3-11-runtime-now-available-in-aws-lambda/"
+        },
+        {
+          "serviceName": "Lambda Python 3.12",
+          "url": "https://aws.amazon.com/lambda/"
+        }
+      ],
+      "description": "Python 3.9 runtime will reach end of support. Migrate to Python 3.11 or 3.12 for continued support.",
+      "tags": ["serverless", "runtime", "python"]
+    },
+    {
+      "id": "aws-lambda-nodejs-18",
+      "vendor": "AWS",
+      "serviceName": "Lambda Node.js 18.x Runtime",
+      "category": "compute",
+      "eolDate": "2026-03-09",
+      "supportEndDate": "2026-03-09",
+      "officialUrl": "https://docs.aws.amazon.com/lambda/latest/dg/lambda-runtimes.html",
+      "alternatives": [
+        {
+          "serviceName": "Lambda Node.js 20.x",
+          "url": "https://aws.amazon.com/blogs/compute/node-js-20-x-runtime-now-available-in-aws-lambda/"
+        }
+      ],
+      "description": "Node.js 18.x runtime end of support extended to March 9, 2026. Upgrade to Node.js 20.x for latest features.",
+      "tags": ["serverless", "runtime", "nodejs"]
+    },
+    {
+      "id": "aws-sdk-javascript-v2",
+      "vendor": "AWS",
+      "serviceName": "AWS SDK for JavaScript v2",
+      "category": "other",
+      "eolDate": "2025-09-08",
+      "supportEndDate": "2025-09-08",
+      "officialUrl": "https://aws.amazon.com/blogs/developer/announcing-end-of-support-for-aws-sdk-for-javascript-v2/",
+      "alternatives": [
+        {
+          "serviceName": "AWS SDK for JavaScript v3",
+          "url": "https://docs.aws.amazon.com/sdk-for-javascript/v3/developer-guide/"
+        }
+      ],
+      "description": "AWS SDK for JavaScript v2 entered maintenance mode. Migrate to v3 for modular architecture and improved performance.",
+      "tags": ["sdk", "javascript", "deprecated"]
+    },
+    {
+      "id": "aws-sdk-java-v1",
+      "vendor": "AWS",
+      "serviceName": "AWS SDK for Java v1.x",
+      "category": "other",
+      "eolDate": "2025-12-31",
+      "supportEndDate": "2025-12-31",
+      "officialUrl": "https://aws.amazon.com/blogs/developer/announcing-end-of-support-for-aws-sdk-for-java-v1-x-on-december-31-2025/",
+      "alternatives": [
+        {
+          "serviceName": "AWS SDK for Java v2",
+          "url": "https://docs.aws.amazon.com/sdk-for-java/latest/developer-guide/"
+        }
+      ],
+      "description": "AWS SDK for Java v1.x will reach end of support. Migrate to v2 for better performance and async support.",
+      "tags": ["sdk", "java", "deprecated"]
+    },
+    {
+      "id": "aws-sdk-go-v1",
+      "vendor": "AWS",
+      "serviceName": "AWS SDK for Go v1",
+      "category": "other",
+      "eolDate": "2025-07-31",
+      "supportEndDate": "2025-07-31",
+      "officialUrl": "https://aws.amazon.com/blogs/developer/announcing-end-of-support-for-aws-sdk-for-go-v1-on-july-31-2025/",
+      "alternatives": [
+        {
+          "serviceName": "AWS SDK for Go v2",
+          "url": "https://aws.github.io/aws-sdk-go-v2/docs/"
+        }
+      ],
+      "description": "AWS SDK for Go v1 will reach end of support. Migrate to v2 for improved API design and performance.",
+      "tags": ["sdk", "golang", "deprecated"]
+    },
+    {
+      "id": "aws-qldb",
+      "vendor": "AWS",
+      "serviceName": "Amazon QLDB",
+      "category": "database",
+      "eolDate": "2025-07-31",
+      "supportEndDate": "2025-07-31",
+      "officialUrl": "https://aws.amazon.com/qldb/",
+      "alternatives": [
+        {
+          "serviceName": "Amazon Aurora PostgreSQL",
+          "url": "https://aws.amazon.com/rds/aurora/"
+        },
+        {
+          "serviceName": "Amazon DynamoDB",
+          "url": "https://aws.amazon.com/dynamodb/"
+        }
+      ],
+      "description": "Amazon QLDB quantum ledger database will be deprecated. Consider Aurora PostgreSQL or DynamoDB as alternatives.",
+      "tags": ["database", "ledger", "deprecated"]
+    },
+    {
+      "id": "aws-workdocs",
+      "vendor": "AWS",
+      "serviceName": "AWS WorkDocs",
+      "category": "other",
+      "eolDate": "2025-04-25",
+      "supportEndDate": "2025-04-25",
+      "officialUrl": "https://docs.aws.amazon.com/workdocs/latest/adminguide/migration-tool.html",
+      "alternatives": [
+        {
+          "serviceName": "Amazon WorkSpaces",
+          "url": "https://aws.amazon.com/workspaces/"
+        }
+      ],
+      "description": "AWS WorkDocs will end support on April 25, 2025. All data will be permanently deleted after this date. Use the Data Migration tool to export to S3.",
+      "tags": ["storage", "collaboration", "deprecated"]
+    },
+    {
+      "id": "aws-lex-v1",
+      "vendor": "AWS",
+      "serviceName": "Amazon Lex V1",
+      "category": "ml-ai",
+      "eolDate": "2025-09-15",
+      "supportEndDate": "2025-09-15",
+      "officialUrl": "https://docs.aws.amazon.com/lex/latest/dg/doc-history.html",
+      "alternatives": [
+        {
+          "serviceName": "Amazon Lex V2",
+          "url": "https://aws.amazon.com/lex/"
+        }
+      ],
+      "description": "Amazon Lex V1 is being deprecated. No new resources after March 31, 2025. All requests will fail after September 15, 2025.",
+      "tags": ["ai", "chatbot", "deprecated"]
+    },
+    {
+      "id": "aws-codestar",
+      "vendor": "AWS",
+      "serviceName": "AWS CodeStar",
+      "category": "other",
+      "eolDate": "2024-07-31",
+      "supportEndDate": "2024-07-31",
+      "officialUrl": "https://aws.amazon.com/codestar/faqs/",
+      "alternatives": [
+        {
+          "serviceName": "AWS CodeCatalyst",
+          "url": "https://aws.amazon.com/codecatalyst/"
+        }
+      ],
+      "description": "AWS CodeStar is deprecated. Migrate to AWS CodeCatalyst for unified development experience.",
+      "tags": ["devtools", "cicd", "deprecated"]
+    },
+    {
+      "id": "aws-aurora-serverless-v1",
+      "vendor": "AWS",
+      "serviceName": "Aurora Serverless v1",
+      "category": "database",
+      "eolDate": "2025-03-31",
+      "supportEndDate": "2025-03-31",
+      "officialUrl": "https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/aurora-serverless.relnotes.html",
+      "alternatives": [
+        {
+          "serviceName": "Aurora Serverless v2",
+          "url": "https://aws.amazon.com/rds/aurora/serverless/"
+        }
+      ],
+      "description": "Aurora Serverless v1 end-of-life extended to March 31, 2025. Clusters will be automatically upgraded to v2 on April 7, 2025 during maintenance window if not migrated.",
+      "tags": ["database", "serverless", "upgrade"]
+    },
+    {
+      "id": "aws-cloudhsm-hsm1-medium",
+      "vendor": "AWS",
+      "serviceName": "CloudHSM hsm1.medium",
+      "category": "security",
+      "eolDate": "2025-12-01",
+      "supportEndDate": "2025-12-01",
+      "officialUrl": "https://docs.aws.amazon.com/cloudhsm/latest/userguide/",
+      "alternatives": [
+        {
+          "serviceName": "CloudHSM hsm2.medium",
+          "url": "https://aws.amazon.com/cloudhsm/"
+        }
+      ],
+      "description": "CloudHSM hsm1.medium instance type will reach end of support. Upgrade to hsm2 family instances.",
+      "tags": ["security", "encryption", "deprecated"]
+    },
+    {
+      "id": "aws-waf-classic",
+      "vendor": "AWS",
+      "serviceName": "WAF Classic",
+      "category": "security",
+      "eolDate": "2025-03-31",
+      "supportEndDate": "2025-03-31",
+      "officialUrl": "https://docs.aws.amazon.com/waf/",
+      "alternatives": [
+        {
+          "serviceName": "AWS WAF",
+          "url": "https://aws.amazon.com/waf/"
+        }
+      ],
+      "description": "WAF Classic will not allow new WebACL creation after March 31, 2025. Migrate to AWS WAF.",
+      "tags": ["security", "firewall", "deprecated"]
+    },
+    {
+      "id": "azure-cloud-services-classic",
+      "vendor": "Azure",
+      "serviceName": "Cloud Services (Classic)",
+      "category": "compute",
+      "eolDate": "2024-08-31",
+      "supportEndDate": "2024-08-31",
+      "officialUrl": "https://learn.microsoft.com/en-us/azure/cloud-services-extended-support/overview",
+      "alternatives": [
+        {
+          "serviceName": "Cloud Services (Extended Support)",
+          "url": "https://azure.microsoft.com/en-us/products/cloud-services/"
+        }
+      ],
+      "description": "Azure Cloud Services classic deployment model was retired. Migrate to Cloud Services (extended support).",
+      "tags": ["compute", "legacy", "deprecated"]
+    },
+    {
+      "id": "azure-cloud-services-extended",
+      "vendor": "Azure",
+      "serviceName": "Cloud Services (Extended Support)",
+      "category": "compute",
+      "eolDate": "2025-03-31",
+      "supportEndDate": "2027-03-31",
+      "officialUrl": "https://learn.microsoft.com/en-us/azure/cloud-services-extended-support/overview",
+      "alternatives": [
+        {
+          "serviceName": "Azure Service Fabric Managed Clusters",
+          "url": "https://azure.microsoft.com/en-us/products/service-fabric/"
+        }
+      ],
+      "description": "Cloud Services (extended support) deprecated March 31, 2025, fully retired March 31, 2027. Migrate to Service Fabric.",
+      "tags": ["compute", "deprecated", "migration"]
+    },
+    {
+      "id": "azure-guest-os-family-2-3-4",
+      "vendor": "Azure",
+      "serviceName": "Guest OS Families 2, 3, and 4",
+      "category": "compute",
+      "eolDate": "2025-03-31",
+      "supportEndDate": "2025-03-31",
+      "officialUrl": "https://learn.microsoft.com/en-us/azure/cloud-services-extended-support/cloud-services-guestos-family-2-3-4-retirement",
+      "alternatives": [
+        {
+          "serviceName": "Guest OS Family 5+",
+          "url": "https://learn.microsoft.com/en-us/azure/cloud-services-extended-support/"
+        }
+      ],
+      "description": "Windows Server 2008 R2, 2012, and 2012 R2 guest OS families retiring. Upgrade to Family 5 or newer.",
+      "tags": ["compute", "windows", "deprecated"]
+    },
+    {
+      "id": "gcp-compute-os-login-posix",
+      "vendor": "GCP",
+      "serviceName": "OS Login POSIX Groups Support",
+      "category": "compute",
+      "eolDate": "2025-09-26",
+      "supportEndDate": "2025-09-26",
+      "officialUrl": "https://cloud.google.com/compute/docs/deprecations",
+      "alternatives": [
+        {
+          "serviceName": "Updated OS Login",
+          "url": "https://cloud.google.com/compute/docs/oslogin"
+        }
+      ],
+      "description": "OS Login POSIX groups support deprecated. Use updated OS Login authentication methods.",
+      "tags": ["compute", "security", "deprecated"]
+    },
+    {
+      "id": "gcp-serial-console-gateway",
+      "vendor": "GCP",
+      "serviceName": "Global Serial Console Gateway",
+      "category": "compute",
+      "eolDate": "2025-04-30",
+      "supportEndDate": "2025-04-30",
+      "officialUrl": "https://cloud.google.com/compute/docs/deprecations",
+      "alternatives": [
+        {
+          "serviceName": "Regional Serial Console",
+          "url": "https://cloud.google.com/compute/docs/troubleshooting/troubleshooting-using-serial-console"
+        }
+      ],
+      "description": "Global serial console gateway deprecated. Use regional serial console access instead.",
+      "tags": ["compute", "networking", "deprecated"]
+    },
+    {
+      "id": "gcp-app-engine-nodejs-12",
+      "vendor": "GCP",
+      "serviceName": "App Engine Node.js 12 Runtime",
+      "category": "compute",
+      "eolDate": "2024-01-30",
+      "supportEndDate": "2024-01-30",
+      "officialUrl": "https://cloud.google.com/appengine/docs/",
+      "alternatives": [
+        {
+          "serviceName": "App Engine Node.js 18+",
+          "url": "https://cloud.google.com/appengine/docs/standard/nodejs/"
+        }
+      ],
+      "description": "Node.js 12 is no longer supported on App Engine. Upgrade to Node.js 18 or later versions.",
+      "tags": ["compute", "runtime", "nodejs"]
+    },
+    {
+      "id": "aws-rds-postgresql-12",
+      "vendor": "AWS",
+      "serviceName": "RDS PostgreSQL 12",
+      "category": "database",
+      "eolDate": "2025-02-28",
+      "supportEndDate": "2025-02-28",
+      "officialUrl": "https://docs.aws.amazon.com/AmazonRDS/latest/PostgreSQLReleaseNotes/postgresql-release-calendar.html",
+      "alternatives": [
+        {
+          "serviceName": "RDS PostgreSQL 15",
+          "url": "https://aws.amazon.com/rds/postgresql/"
+        },
+        {
+          "serviceName": "RDS PostgreSQL 16",
+          "url": "https://aws.amazon.com/rds/postgresql/"
+        }
+      ],
+      "description": "PostgreSQL 12 reaches end of standard support on February 28, 2025. Extended support available for additional cost.",
+      "tags": ["database", "postgresql", "rds"]
+    },
+    {
+      "id": "aws-rds-postgresql-13",
+      "vendor": "AWS",
+      "serviceName": "RDS PostgreSQL 13",
+      "category": "database",
+      "eolDate": "2026-02-28",
+      "supportEndDate": "2026-02-28",
+      "officialUrl": "https://docs.aws.amazon.com/AmazonRDS/latest/PostgreSQLReleaseNotes/postgresql-release-calendar.html",
+      "alternatives": [
+        {
+          "serviceName": "RDS PostgreSQL 15",
+          "url": "https://aws.amazon.com/rds/postgresql/"
+        },
+        {
+          "serviceName": "RDS PostgreSQL 16",
+          "url": "https://aws.amazon.com/rds/postgresql/"
+        }
+      ],
+      "description": "PostgreSQL 13 will reach end of standard support on February 28, 2026.",
+      "tags": ["database", "postgresql", "rds"]
+    },
+    {
+      "id": "aws-rds-mariadb-104",
+      "vendor": "AWS",
+      "serviceName": "RDS MariaDB 10.4",
+      "category": "database",
+      "eolDate": "2025-02-28",
+      "supportEndDate": "2025-02-28",
+      "officialUrl": "https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/MariaDB.Concepts.VersionMgmt.html",
+      "alternatives": [
+        {
+          "serviceName": "RDS MariaDB 10.11",
+          "url": "https://aws.amazon.com/rds/mariadb/"
+        }
+      ],
+      "description": "MariaDB 10.4 will reach end of standard support on February 28, 2025.",
+      "tags": ["database", "mariadb", "rds"]
+    },
+    {
+      "id": "aws-sdk-dotnet-v3",
+      "vendor": "AWS",
+      "serviceName": "AWS SDK for .NET v3",
+      "category": "other",
+      "eolDate": "2026-03-01",
+      "supportEndDate": "2026-03-01",
+      "officialUrl": "https://aws.amazon.com/blogs/devops/announcing-the-end-of-support-for-the-aws-sdk-for-net-v3/",
+      "alternatives": [
+        {
+          "serviceName": "AWS SDK for .NET v4",
+          "url": "https://docs.aws.amazon.com/sdk-for-net/"
+        }
+      ],
+      "description": "AWS SDK for .NET v3 will reach end of support on March 1, 2026. Migrate to v4 for continued support.",
+      "tags": ["sdk", "dotnet", "deprecated"]
+    },
+    {
+      "id": "azure-basic-public-ip",
+      "vendor": "Azure",
+      "serviceName": "Basic SKU Public IP Addresses",
+      "category": "networking",
+      "eolDate": "2026-02-28",
+      "supportEndDate": "2026-02-28",
+      "officialUrl": "https://learn.microsoft.com/en-us/azure/virtual-network/ip-services/public-ip-basic-upgrade-guidance",
+      "alternatives": [
+        {
+          "serviceName": "Standard SKU Public IP",
+          "url": "https://learn.microsoft.com/en-us/azure/virtual-network/ip-services/public-ip-addresses"
+        }
+      ],
+      "description": "Basic SKU Public IP addresses will be retired on February 28, 2026. Last day to create new Basic IPs is March 31, 2025.",
+      "tags": ["networking", "azure", "deprecated"]
+    },
+    {
+      "id": "gcp-deployment-manager",
+      "vendor": "GCP",
+      "serviceName": "Google Cloud Deployment Manager",
+      "category": "other",
+      "eolDate": "2026-03-31",
+      "supportEndDate": "2026-03-31",
+      "officialUrl": "https://cloud.google.com/deployment-manager/docs/deprecations",
+      "alternatives": [
+        {
+          "serviceName": "Infrastructure Manager",
+          "url": "https://cloud.google.com/infrastructure-manager/docs"
+        },
+        {
+          "serviceName": "Terraform",
+          "url": "https://www.terraform.io/"
+        }
+      ],
+      "description": "Google Cloud Deployment Manager will be discontinued on March 31, 2026. Migrate to Infrastructure Manager or Terraform.",
+      "tags": ["infrastructure", "iac", "deprecated"]
+    },
+    {
+      "id": "gcp-cloud-source-repositories",
+      "vendor": "GCP",
+      "serviceName": "Cloud Source Repositories",
+      "category": "other",
+      "eolDate": "2025-07-31",
+      "supportEndDate": "2025-07-31",
+      "officialUrl": "https://cloud.google.com/source-repositories/docs",
+      "alternatives": [
+        {
+          "serviceName": "GitHub",
+          "url": "https://github.com"
+        },
+        {
+          "serviceName": "GitLab",
+          "url": "https://gitlab.com"
+        }
+      ],
+      "description": "Cloud Source Repositories is being deprecated. Migrate to GitHub, GitLab, or Bitbucket for source control.",
+      "tags": ["git", "repository", "deprecated"]
+    }
+  ],
+  "vendors": [
+    {
+      "id": "AWS",
+      "name": "Amazon Web Services",
+      "logo": ""
+    },
+    {
+      "id": "Azure",
+      "name": "Microsoft Azure",
+      "logo": ""
+    },
+    {
+      "id": "GCP",
+      "name": "Google Cloud Platform",
+      "logo": ""
+    }
+  ],
+  "categories": [
+    {
+      "id": "compute",
+      "name": "Compute",
+      "icon": "💻"
+    },
+    {
+      "id": "storage",
+      "name": "Storage",
+      "icon": "💾"
+    },
+    {
+      "id": "database",
+      "name": "Database",
+      "icon": "🗄️"
+    },
+    {
+      "id": "networking",
+      "name": "Networking",
+      "icon": "🌐"
+    },
+    {
+      "id": "security",
+      "name": "Security & Identity",
+      "icon": "🔒"
+    },
+    {
+      "id": "analytics",
+      "name": "Analytics",
+      "icon": "📊"
+    },
+    {
+      "id": "ml-ai",
+      "name": "Machine Learning & AI",
+      "icon": "🤖"
+    },
+    {
+      "id": "other",
+      "name": "Other",
+      "icon": "📦"
+    }
+  ]
+}

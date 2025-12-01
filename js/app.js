@@ -112,6 +112,14 @@ const App = {
                 I18n.switchLanguage();
             });
         }
+
+        // CSV download button
+        const csvDownloadBtn = document.getElementById('download-csv-btn');
+        if (csvDownloadBtn) {
+            csvDownloadBtn.addEventListener('click', () => {
+                CSVExporter.downloadCSV(this.state.filteredData, this.state.data.categories);
+            });
+        }
     },
 
     /**
@@ -187,6 +195,12 @@ const App = {
 
         this.updateResultCount();
         this.render();
+
+        // Enable/disable CSV download button based on results
+        const csvDownloadBtn = document.getElementById('download-csv-btn');
+        if (csvDownloadBtn) {
+            csvDownloadBtn.disabled = this.state.filteredData.length === 0;
+        }
     },
 
     /**

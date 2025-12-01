@@ -49,6 +49,7 @@ const I18n = {
             disclaimerTrademarks: 'All trademarks, service marks, and company names are the property of their respective owners.',
             disclaimerLiability: 'The authors and contributors are not liable for any damages arising from the use of this information.',
             downloadJson: 'Download JSON Data',
+            downloadCsv: 'Download Filtered CSV',
             githubContribute: 'Contribute on GitHub',
             reportIssue: 'Found an error? Report an issue or submit a PR',
 
@@ -83,7 +84,19 @@ const I18n = {
 
             // Result Count
             servicesCount: '{count} of {total} services',
-            lastUpdated: 'Last updated: {date}'
+            lastUpdated: 'Last updated: {date}',
+
+            // CSV Export Headers
+            csvHeaderVendor: 'Vendor',
+            csvHeaderServiceName: 'Service Name',
+            csvHeaderCategory: 'Category',
+            csvHeaderEolDate: 'EOL Date',
+            csvHeaderSupportEndDate: 'Support End Date',
+            csvHeaderStatus: 'Status',
+            csvHeaderDaysUntilEol: 'Days Until EOL',
+            csvHeaderDescription: 'Description',
+            csvHeaderOfficialUrl: 'Official URL',
+            csvHeaderAlternatives: 'Alternative Services'
         },
         ja: {
             // ヘッダー
@@ -127,6 +140,7 @@ const I18n = {
             disclaimerTrademarks: 'すべての商標、サービスマーク、企業名は各所有者に帰属します。',
             disclaimerLiability: '本情報の利用により生じたいかなる損害についても、作成者および貢献者は責任を負いません。',
             downloadJson: 'JSONデータをダウンロード',
+            downloadCsv: 'フィルター済みCSVをダウンロード',
             githubContribute: 'GitHubで貢献する',
             reportIssue: '誤りを見つけましたか？Issueまたはプルリクエストをお願いします',
 
@@ -161,7 +175,19 @@ const I18n = {
 
             // 結果数
             servicesCount: '{total}件中{count}件のサービス',
-            lastUpdated: '最終更新: {date}'
+            lastUpdated: '最終更新: {date}',
+
+            // CSVエクスポートヘッダー
+            csvHeaderVendor: 'ベンダー',
+            csvHeaderServiceName: 'サービス名',
+            csvHeaderCategory: 'カテゴリ',
+            csvHeaderEolDate: 'EOL日',
+            csvHeaderSupportEndDate: 'サポート終了日',
+            csvHeaderStatus: 'ステータス',
+            csvHeaderDaysUntilEol: 'EOLまでの日数',
+            csvHeaderDescription: '説明',
+            csvHeaderOfficialUrl: '公式URL',
+            csvHeaderAlternatives: '代替サービス'
         }
     },
 
